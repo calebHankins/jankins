@@ -16,11 +16,6 @@ RUN npm install -g npm-groovy-lint
 # Install Maven
 RUN apt-get install -y maven
 
-# Install dependencies listed in pom
-WORKDIR /usr/src/jankins
-COPY ./pom.xml /usr/src/jankins/
-RUN mvn install
-
 # Drop back to the regular jenkins user
 USER jenkins
 
@@ -37,6 +32,17 @@ COPY ./jenkins/config/security.groovy /usr/share/jenkins/ref/init.groovy.d/secur
 ENV JENKINS_EXECUTORS=1
 COPY ./jenkins/config/executors.groovy /usr/share/jenkins/ref/init.groovy.d/executors.groovy
 
+USER root
+
+# Install dependencies listed in pom and perform sanity tests
+WORKDIR /usr/src/jankins
+COPY ./pom.xml ./
+RUN mvn clean install
+
+# Copy Groovy Samples and Run sanity tests
+COPY ./vars ./vars
+COPY ./test ./test
+RUN mvn clean test
 
 # todo, roll a custom bootstrap around the entrypoint, only spin up jenkins app if we have pipelines to validate
 # ENTRYPOINT [ "bash" ]

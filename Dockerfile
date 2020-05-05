@@ -53,7 +53,7 @@ RUN mvn clean test
 # RUN npm-groovy-lint --failoninfo
 # @a For now, going to port the results to json and do a quick check in a custom node script
 # RUN mkdir -p ./logs && npm-groovy-lint --output 'json' > './logs/groovyLintResults.json'
-# @info The linter will print 1 or more lines of non-json text, adding a grep to only save lines starting with a {
+# @info The linter will print 1 or more lines of non-json text, adding a grep to only save lines starting with a '{'
 COPY ./scripts ./scripts
 COPY ./.groovylintrc.json ./.groovylintrc.json
 RUN mkdir -p ./logs && npm-groovy-lint --output 'json' | grep '^{' > './logs/groovyLintResults.json'

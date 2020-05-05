@@ -1,0 +1,7 @@
+language: groovy
+
+services:
+  - docker
+
+  script:
+  - docker build --rm -t calebhankins/jankins .

@@ -41,6 +41,7 @@ RUN mvn clean install
 
 # Copy Groovy Samples and Run sanity tests
 COPY ./vars ./vars
+COPY ./src ./src
 COPY ./test ./test
 RUN mvn clean test
 

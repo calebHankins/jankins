@@ -33,3 +33,6 @@ JENKINS_PASSWD=jankins
 JENKINS_EXECUTORS=1
 ```
 
+# Related Links
+- [Jake Wernette's awesome series on Jenkins Shared Libraries](https://itnext.io/jenkins-shared-libraries-part-1-5ba3d072536a)
+- [Jenkins Official Docker hub](https://hub.docker.com/r/jenkins/jenkins)

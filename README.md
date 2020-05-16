@@ -4,7 +4,7 @@
 [![Docker Cloud Automated build](https://img.shields.io/docker/cloud/automated/calebhankins/jankins.svg?style=flat-square)](https://hub.docker.com/r/calebhankins/jankins/)
 [![Docker Cloud Build Status](https://img.shields.io/docker/cloud/build/calebhankins/jankins.svg?style=flat-square)](https://hub.docker.com/r/calebhankins/jankins/)
 
-An [image base](https://www.docker.com/) for linting and ci/cd of [Jenkinsfiles](https://www.jenkins.io/doc/book/pipeline/jenkinsfile/) and related [Shared Libraries](https://www.jenkins.io/doc/book/pipeline/shared-libraries/) written in [groovy](https://en.wikipedia.org/wiki/Apache_Groovy).
+*An [image base](https://www.docker.com/) for linting and ci/cd of [Jenkinsfiles](https://www.jenkins.io/doc/book/pipeline/jenkinsfile/) and related [Shared Libraries](https://www.jenkins.io/doc/book/pipeline/shared-libraries/) written in [groovy](https://en.wikipedia.org/wiki/Apache_Groovy).*
 
 # Build
 

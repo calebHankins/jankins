@@ -1,6 +1,6 @@
 # jankins
 
-![](./img/jankins.png)
+![logo](https://raw.githubusercontent.com/calebHankins/jankins/master/img/jankins.png)
 [![Docker Cloud Automated build](https://img.shields.io/docker/cloud/automated/calebhankins/jankins.svg?style=flat-square)](https://hub.docker.com/r/calebhankins/jankins/)
 [![Docker Cloud Build Status](https://img.shields.io/docker/cloud/build/calebhankins/jankins.svg?style=flat-square)](https://hub.docker.com/r/calebhankins/jankins/)
 

@@ -1,9 +1,10 @@
 # jankins
 
+![](./img/jankins.png)
 [![Docker Cloud Automated build](https://img.shields.io/docker/cloud/automated/calebhankins/jankins.svg?style=flat-square)](https://hub.docker.com/r/calebhankins/jankins/)
 [![Docker Cloud Build Status](https://img.shields.io/docker/cloud/build/calebhankins/jankins.svg?style=flat-square)](https://hub.docker.com/r/calebhankins/jankins/)
 
-An [image base](https://www.docker.com/) for linting and ci/cd of [Jenkinsfiles](https://www.jenkins.io/doc/book/pipeline/jenkinsfile/) and related [Shared Libraries](https://www.jenkins.io/doc/book/pipeline/shared-libraries/) written in [groovy](https://en.wikipedia.org/wiki/Apache_Groovy).
+*An [image base](https://www.docker.com/) for linting and ci/cd of [Jenkinsfiles](https://www.jenkins.io/doc/book/pipeline/jenkinsfile/) and related [Shared Libraries](https://www.jenkins.io/doc/book/pipeline/shared-libraries/) written in [groovy](https://en.wikipedia.org/wiki/Apache_Groovy).*
 
 # Build
 
@@ -33,6 +34,8 @@ JENKINS_PASSWD=jankins
 JENKINS_EXECUTORS=1
 ```
 
-# Related Links
-- [Jake Wernette's awesome series on Jenkins Shared Libraries](https://itnext.io/jenkins-shared-libraries-part-1-5ba3d072536a)
-- [Jenkins Official Docker hub](https://hub.docker.com/r/jenkins/jenkins)
+# Related Links & Credits
+- [jankins](https://github.com/calebHankins/jankins) logo derived from the [Jenkins project](https://jenkins.io/) artwork, supplied by [@jvanceACX](https://github.com/jvanceACX).
+- [Jake Wernette's awesome series on Jenkins Shared Libraries](https://itnext.io/jenkins-shared-libraries-part-1-5ba3d072536a).
+- [Jenkins Official Docker hub](https://hub.docker.com/r/jenkins/jenkins).
+- [jankins-workspace](https://github.com/calebHankins/jankins-workspace), a containerized workspace for jankins using vscode's remote-container feature.

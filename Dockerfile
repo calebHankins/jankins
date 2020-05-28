@@ -4,7 +4,7 @@ USER root
 
 # Install Node.js
 RUN apt-get update && apt-get install -y wget tar
-RUN wget https://nodejs.org/dist/v12.16.1/node-v12.16.1-linux-x64.tar.gz
+RUN wget https://nodejs.org/dist/v12.17.0/node-v12.17.0-linux-x64.tar.gz
 RUN tar --strip-components 1 -xzvf node-v* -C /usr/local
 
 # Install groovy

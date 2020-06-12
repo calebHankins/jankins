@@ -2,6 +2,16 @@ FROM jenkins/jenkins:lts
 
 USER root
 
+# Install git 2.27
+RUN apt remove -y git
+WORKDIR /usr/src/
+RUN apt update -y && apt upgrade -y
+RUN apt install -y build-essential make libssl-dev libghc-zlib-dev libcurl4-gnutls-dev libexpat1-dev gettext unzip
+RUN wget https://www.kernel.org/pub/software/scm/git/git-2.27.0.tar.gz -O git.tar.gz
+RUN tar -xf git.tar.gz && rm git.tar.gz
+RUN cd git-* && make prefix=/usr all && make prefix=/usr install && rm -rf /usr/src/git-*
+RUN git --version
+
 # Install Node.js
 RUN apt-get update && apt-get install -y wget tar
 RUN wget https://nodejs.org/dist/v12.17.0/node-v12.17.0-linux-x64.tar.gz

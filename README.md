@@ -11,7 +11,7 @@
 Run these commands from the same folder as this readme. Tweak the Dockerfile to meet your needs.
 
 ```bash
-docker build --rm -f "Dockerfile" -t jankins .
+docker build --pull --rm -f "Dockerfile" -t jankins .
 ```
 
 # Run

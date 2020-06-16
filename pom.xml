@@ -21,7 +21,7 @@
         <groovy.version>2.4.8</groovy.version>
         <groovy.spock.version>1.1-groovy-2.4</groovy.spock.version>
         <groovy.gmaven.pluginVersion>1.6.1</groovy.gmaven.pluginVersion>
-        <google.guava.version>20.0</google.guava.version>
+        <google.guava.version>[24.1.1,)</google.guava.version>
 
         <jenkins-spock.version>2.1.2</jenkins-spock.version>
         <jenkins.version>2.102</jenkins.version>

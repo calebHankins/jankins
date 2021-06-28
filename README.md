@@ -6,7 +6,7 @@
 
 *An [image base](https://www.docker.com/) for linting and ci/cd of [Jenkinsfiles](https://www.jenkins.io/doc/book/pipeline/jenkinsfile/) and related [Shared Libraries](https://www.jenkins.io/doc/book/pipeline/shared-libraries/) written in [groovy](https://en.wikipedia.org/wiki/Apache_Groovy).*
 
-# Build
+## Build
 
 Run these commands from the same folder as this readme. Tweak the Dockerfile to meet your needs.
 
@@ -14,7 +14,7 @@ Run these commands from the same folder as this readme. Tweak the Dockerfile to 
 docker build --pull --rm -f "Dockerfile" -t jankins .
 ```
 
-# Run
+## Run
 
 ```bash
 # Start the container and run bash interactively
@@ -25,7 +25,8 @@ docker run --rm -p '8081:8080' -it -e JENKINS_EXECUTORS=4 -e JENKINS_USER='admin
 # Exposed as: http://0.0.0.0:8081
 ```
 
-## Run Params
+### Run Params
+
 - The Jenkins env can be customized at runtime via the following [Docker env vars](https://docs.docker.com/engine/reference/commandline/run/#set-environment-variables--e---env---env-file). Sample values are shown below.
 
 ```ini
@@ -34,7 +35,8 @@ JENKINS_PASSWD=jankins
 JENKINS_EXECUTORS=1
 ```
 
-# Related Links & Credits
+## Related Links & Credits
+
 - [jankins](https://github.com/calebHankins/jankins) logo derived from the [Jenkins project](https://jenkins.io/) artwork, supplied by [@jvanceACX](https://github.com/jvanceACX).
 - [Jake Wernette's awesome series on Jenkins Shared Libraries](https://itnext.io/jenkins-shared-libraries-part-1-5ba3d072536a).
 - [Jenkins Official Docker hub](https://hub.docker.com/r/jenkins/jenkins).

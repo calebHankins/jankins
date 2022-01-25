@@ -26,24 +26,24 @@
         <groovy.core.version>2.4.8</groovy.core.version>
         <groovy.version>2.4.8</groovy.version>
         <groovy.spock.version>1.1-groovy-2.4</groovy.spock.version>
-        <groovy.gmaven.pluginVersion>1.13.1</groovy.gmaven.pluginVersion>
+        <groovy.gmaven.pluginVersion>1.6.1</groovy.gmaven.pluginVersion>
         <google.guava.version>[24.1.1,)</google.guava.version>
 
-        <jenkins-spock.version>2.1.5</jenkins-spock.version>
+        <jenkins-spock.version>2.1.2</jenkins-spock.version>
         <jenkins.version>2.319.2</jenkins.version>
-        <jenkins.servlet.version>4.0.1</jenkins.servlet.version>
-        <jenkins.workflow.cps.version>2648.va9433432b33c</jenkins.workflow.cps.version>
+        <jenkins.servlet.version>3.1.0</jenkins.servlet.version>
+        <jenkins.workflow.cps.version>2.36</jenkins.workflow.cps.version>
         <jenkins.workflow.basic.steps.version>2.6</jenkins.workflow.basic.steps.version>
 
-        <junit.version>4.13.2</junit.version>
-        <junit.plugin.version>1.53</junit.plugin.version>
-        <surefire.pluginVersion>3.0.0-M5</surefire.pluginVersion>
+        <junit.version>4.13.1</junit.version>
+        <junit.plugin.version>1.24</junit.plugin.version>
+        <surefire.pluginVersion>2.22.0</surefire.pluginVersion>
 
         <logback.configration>logback-test.xml</logback.configration>
         <logdir>${project.build.directory}/log</logdir>
         <test.loglevel>ERROR</test.loglevel>
-        <log.logback.version>1.3.0-alpha12</log.logback.version>
-        <log.slf4j.version>2.0.0-alpha6</log.slf4j.version>
+        <log.logback.version>1.2.3</log.logback.version>
+        <log.slf4j.version>1.7.25</log.slf4j.version>
     </properties>
     <dependencyManagement>
         <dependencies>
@@ -131,54 +131,34 @@
             <!-- provides sh() step -->
             <groupId>org.jenkins-ci.plugins.workflow</groupId>
             <artifactId>workflow-durable-task-step</artifactId>
-            <version>1121.va_65b_d2701486</version>
+            <version>2.21</version>
             <scope>test</scope>
         </dependency>
         <dependency>
             <!-- provides stage() step -->
             <groupId>org.jenkins-ci.plugins</groupId>
             <artifactId>pipeline-stage-step</artifactId>
-            <version>291.vf0a8a7aeeb50</version>
+            <version>2.3</version>
             <scope>test</scope>
         </dependency>
         <dependency>
             <!-- provides git() step -->
             <groupId>org.jenkins-ci.plugins</groupId>
             <artifactId>git</artifactId>
-            <version>4.10.3</version>
+            <version>3.9.1</version>
             <scope>test</scope>
         </dependency>
         <!-- Add Jenkins pipeline unit support https://github.com/jenkinsci/JenkinsPipelineUnit -->
         <dependency>
             <groupId>com.lesfurets</groupId>
             <artifactId>jenkins-pipeline-unit</artifactId>
-            <version>1.13</version>
+            <version>1.3</version>
             <scope>test</scope>
         </dependency>
     </dependencies>
     <build>
         <pluginManagement>
             <plugins>
-                <plugin>
-                    <groupId>org.apache.maven.plugins</groupId>
-                    <artifactId>maven-enforcer-plugin</artifactId>
-                    <version>3.0.0</version>
-                    <executions>
-                    <execution>
-                        <id>enforce-maven</id>
-                        <goals>
-                        <goal>enforce</goal>
-                        </goals>
-                        <configuration>
-                        <rules>
-                            <requireMavenVersion>
-                            <version>3.6</version>
-                            </requireMavenVersion>
-                        </rules>
-                        </configuration>
-                    </execution>
-                    </executions>
-                </plugin>
                 <plugin>
                     <groupId>org.apache.maven.plugins</groupId>
                     <artifactId>maven-surefire-plugin</artifactId>
@@ -249,7 +229,7 @@
                 <plugin>
                     <groupId>org.jacoco</groupId>
                     <artifactId>jacoco-maven-plugin</artifactId>
-                    <version>0.8.7</version>
+                    <version>0.8.3</version>
                     <executions>
                         <execution>
                             <goals>
@@ -269,10 +249,6 @@
             </plugins>
         </pluginManagement>
         <plugins>
-            <plugin>
-                <groupId>org.apache.maven.plugins</groupId>
-                <artifactId>maven-enforcer-plugin</artifactId>
-            </plugin>
             <plugin>
                 <groupId>org.codehaus.gmavenplus</groupId>
                 <artifactId>gmavenplus-plugin</artifactId>

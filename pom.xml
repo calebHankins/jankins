@@ -24,7 +24,7 @@
         <groovy.core.version>3.0.9</groovy.core.version>
         <groovy.version>3.0.9</groovy.version>
         <groovy.spock.version>1.1-groovy-2.4</groovy.spock.version>
-        <groovy.gmaven.pluginVersion>1.6.1</groovy.gmaven.pluginVersion>
+        <groovy.gmaven.pluginVersion>1.13.1</groovy.gmaven.pluginVersion>
         <google.guava.version>[24.1.1,)</google.guava.version>
 
         <jenkins-spock.version>2.1.5</jenkins-spock.version>
@@ -35,7 +35,7 @@
 
         <junit.version>4.13.2</junit.version>
         <junit.plugin.version>1.53</junit.plugin.version>
-        <surefire.pluginVersion>2.22.0</surefire.pluginVersion>
+        <surefire.pluginVersion>3.0.0-M5</surefire.pluginVersion>
 
         <logback.configration>logback-test.xml</logback.configration>
         <logdir>${project.build.directory}/log</logdir>
@@ -247,7 +247,7 @@
                 <plugin>
                     <groupId>org.jacoco</groupId>
                     <artifactId>jacoco-maven-plugin</artifactId>
-                    <version>0.8.3</version>
+                    <version>0.8.7</version>
                     <executions>
                         <execution>
                             <goals>

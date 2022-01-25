@@ -21,8 +21,10 @@
     </repositories>
 
     <properties>
-        <groovy.core.version>3.0.9</groovy.core.version>
-        <groovy.version>3.0.9</groovy.version>
+        <maven.compiler.source>1.8</maven.compiler.source>
+        <maven.compiler.target>1.8</maven.compiler.target>
+        <groovy.core.version>2.4.8</groovy.core.version>
+        <groovy.version>2.4.8</groovy.version>
         <groovy.spock.version>1.1-groovy-2.4</groovy.spock.version>
         <groovy.gmaven.pluginVersion>1.13.1</groovy.gmaven.pluginVersion>
         <google.guava.version>[24.1.1,)</google.guava.version>

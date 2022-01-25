@@ -129,28 +129,28 @@
             <!-- provides sh() step -->
             <groupId>org.jenkins-ci.plugins.workflow</groupId>
             <artifactId>workflow-durable-task-step</artifactId>
-            <version>2.21</version>
+            <version>1121.va_65b_d2701486</version>
             <scope>test</scope>
         </dependency>
         <dependency>
             <!-- provides stage() step -->
             <groupId>org.jenkins-ci.plugins</groupId>
             <artifactId>pipeline-stage-step</artifactId>
-            <version>2.3</version>
+            <version>291.vf0a8a7aeeb50</version>
             <scope>test</scope>
         </dependency>
         <dependency>
             <!-- provides git() step -->
             <groupId>org.jenkins-ci.plugins</groupId>
             <artifactId>git</artifactId>
-            <version>3.9.1</version>
+            <version>4.10.3</version>
             <scope>test</scope>
         </dependency>
         <!-- Add Jenkins pipeline unit support https://github.com/jenkinsci/JenkinsPipelineUnit -->
         <dependency>
             <groupId>com.lesfurets</groupId>
             <artifactId>jenkins-pipeline-unit</artifactId>
-            <version>1.3</version>
+            <version>1.13</version>
             <scope>test</scope>
         </dependency>
     </dependencies>

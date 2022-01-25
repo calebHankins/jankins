@@ -21,6 +21,8 @@
     </repositories>
 
     <properties>
+        <maven.compiler.source>1.8</maven.compiler.source>
+        <maven.compiler.target>1.8</maven.compiler.target>
         <groovy.core.version>2.4.8</groovy.core.version>
         <groovy.version>2.4.8</groovy.version>
         <groovy.spock.version>1.1-groovy-2.4</groovy.spock.version>
@@ -28,7 +30,7 @@
         <google.guava.version>[24.1.1,)</google.guava.version>
 
         <jenkins-spock.version>2.1.2</jenkins-spock.version>
-        <jenkins.version>2.283</jenkins.version>
+        <jenkins.version>2.319.2</jenkins.version>
         <jenkins.servlet.version>3.1.0</jenkins.servlet.version>
         <jenkins.workflow.cps.version>2.36</jenkins.workflow.cps.version>
         <jenkins.workflow.basic.steps.version>2.6</jenkins.workflow.basic.steps.version>

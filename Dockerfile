@@ -7,7 +7,7 @@ USER root
 # else we're going to take the lts (erbium at the time of authoring this file)
 ARG NODE_VERSION=
 RUN apt-get update && apt-get install -y wget tar sed
-RUN export NODE_VERSION=${NODE_VERSION:-$(wget -qO- https://nodejs.org/dist/latest-erbium/ | sed -nE 's|.*>node-(.*)\.pkg</a>.*|\1|p')} \
+RUN export NODE_VERSION=${NODE_VERSION:-$(wget -qO- https://nodejs.org/dist/latest-gallium/ | sed -nE 's|.*>node-(.*)\.pkg</a>.*|\1|p')} \
     &&  wget https://nodejs.org/dist/${NODE_VERSION}/node-${NODE_VERSION}-linux-x64.tar.gz \
     &&  tar --strip-components 1 -xzf node-v* -C /usr/local && rm node-*-linux-x64.tar.gz
 

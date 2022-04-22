@@ -64,8 +64,8 @@ jobs:
         with:
             context: .
             file: ./Dockerfile
-        #   push: ${{ github.event_name != 'pull_request' }}
-            push: false # todo
+            push: ${{ github.event_name != 'pull_request' }}
+            # push: false # todo
             tags: ${{ steps.meta.outputs.tags }}
             labels: ${{ steps.meta.outputs.labels }}
             cache-from: type=registry,ref=${{ secrets.DOCKER_HUB_USERNAME }}/${{ steps.repo-name.outputs.value }}:buildcache

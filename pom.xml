@@ -144,27 +144,40 @@
             <version>1204.v2a_40b_1127a_a_8</version>
             <scope>test</scope>
         </dependency>
+        <!-- https://mvnrepository.com/artifact/org.jenkins-ci.plugins.workflow/workflow-cps -->
         <dependency>
             <groupId>org.jenkins-ci.plugins.workflow</groupId>
             <artifactId>workflow-cps</artifactId>
-            <version>2713.v8b_f3c8cb_97a_0</version>
+            <version>2706.v71dd22b_c5a_a_2</version>
         </dependency>
-        <!-- <dependency>
+        <dependency>
             <groupId>org.jenkins-ci.plugins.workflow</groupId>
             <artifactId>workflow-cps-global-lib</artifactId>
             <version>570.v21311f4951f8</version>
-        </dependency>  -->
-        <!-- <dependency>
+        </dependency>
+        <dependency>
             <groupId>org.jenkins-ci.plugins.workflow</groupId>
             <artifactId>workflow-basic-steps</artifactId>
             <version>967.v241f45274471</version>
             <scope>test</scope>
-        </dependency> -->
-        <!-- <dependency>
+        </dependency>
+        <dependency>
             <groupId>org.jenkins-ci.plugins</groupId>
             <artifactId>script-security</artifactId>
-            <version>1176.vdf3ee0eeea_e0</version>
-        </dependency> -->
+            <version>1172.v35f6a_0b_8207e</version>
+        </dependency>
+        <!-- https://mvnrepository.com/artifact/org.jenkins-ci.plugins/credentials -->
+        <dependency>
+            <groupId>org.jenkins-ci.plugins</groupId>
+            <artifactId>credentials</artifactId>
+            <version>1129.vef26f5df883c</version>
+        </dependency>
+        <!-- https://mvnrepository.com/artifact/org.jenkins-ci.plugins/ssh-credentials -->
+        <dependency>
+            <groupId>org.jenkins-ci.plugins</groupId>
+            <artifactId>ssh-credentials</artifactId>
+            <version>278.vce3c38eee230</version>
+        </dependency>
         <dependency>
             <!-- provides stage() step -->
             <groupId>org.jenkins-ci.plugins</groupId>

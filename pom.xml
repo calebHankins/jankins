@@ -160,11 +160,11 @@
             <version>967.v241f45274471</version>
             <scope>test</scope>
         </dependency> -->
-        <dependency>
+        <!-- <dependency>
             <groupId>org.jenkins-ci.plugins</groupId>
             <artifactId>script-security</artifactId>
             <version>1176.vdf3ee0eeea_e0</version>
-        </dependency>
+        </dependency> -->
         <dependency>
             <!-- provides stage() step -->
             <groupId>org.jenkins-ci.plugins</groupId>

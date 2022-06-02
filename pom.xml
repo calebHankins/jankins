@@ -35,7 +35,7 @@
         <maven.compiler.target>1.8</maven.compiler.target>
         <groovy.core.version>2.4.21</groovy.core.version>
         <groovy.version>2.4.21</groovy.version>
-        <groovy.spock.version>1.1-groovy-2.4</groovy.spock.version>
+        <!-- <groovy.spock.version>1.1-groovy-2.4</groovy.spock.version> -->
         <groovy.gmaven.pluginVersion>1.6.1</groovy.gmaven.pluginVersion>
         <google.guava.version>[24.1.1,)</google.guava.version>
 
@@ -149,11 +149,11 @@
             <artifactId>workflow-cps</artifactId>
             <version>2713.v8b_f3c8cb_97a_0</version>
         </dependency>
-        <dependency>
+        <!-- <dependency>
             <groupId>org.jenkins-ci.plugins.workflow</groupId>
             <artifactId>workflow-cps-global-lib</artifactId>
             <version>570.v21311f4951f8</version>
-        </dependency>
+        </dependency>  -->
         <dependency>
             <groupId>org.jenkins-ci.plugins.workflow</groupId>
             <artifactId>workflow-basic-steps</artifactId>

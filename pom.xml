@@ -145,7 +145,7 @@
             <!-- provides git() step -->
             <groupId>org.jenkins-ci.plugins</groupId>
             <artifactId>git</artifactId>
-            <version>3.9.1</version>
+            <version>4.11.2</version>
             <scope>test</scope>
         </dependency>
         <!-- Add Jenkins pipeline unit support https://github.com/jenkinsci/JenkinsPipelineUnit -->

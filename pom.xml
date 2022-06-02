@@ -15,6 +15,11 @@
             <url>https://repo1.maven.org/maven2/</url>
         </repository>
         <repository>
+            <id>jenkins-releases</id>
+            <name>Jenkins Releases</name>
+            <url>http://repo.jenkins-ci.org/releases</url>
+        </repository>
+        <repository>
             <id>repo.jenkins-ci.org</id>
             <url>https://repo.jenkins-ci.org/public/</url>
         </repository>
@@ -22,11 +27,6 @@
             <id>jenkins-incrementals</id>
             <name>Jenkins Incrementals</name>
             <url>https://repo.jenkins-ci.org/incrementals/</url>
-        </repository>
-        <repository>
-            <id>jenkins-releases</id>
-            <name>Jenkins Releases</name>
-            <url>http://repo.jenkins-ci.org/releases</url>
         </repository>
     </repositories>
 

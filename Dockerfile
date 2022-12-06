@@ -22,8 +22,10 @@ RUN apt-get install -y maven
 USER jenkins
 
 # Install extensions needed for pipeline linting
+# @see: https://community.jenkins.io/t/how-to-generate-a-docker-with-the-desired-plugins-installed/3453
 COPY ./jenkins/config/pipeline.txt /usr/share/jenkins/ref/pipeline.txt
-RUN /usr/local/bin/install-plugins.sh < /usr/share/jenkins/ref/pipeline.txt
+RUN jenkins-plugin-cli --verbose --plugin-file /usr/share/jenkins/ref/pipeline.txt || \
+    /usr/local/bin/install-plugins.sh < /usr/share/jenkins/ref/pipeline.txt
 
 # Install service account for pipeline linting
 ENV JENKINS_USER='jankins' JENKINS_PASSWD='jankins'

@@ -23,7 +23,8 @@ USER jenkins
 
 # Install extensions needed for pipeline linting
 COPY ./jenkins/config/pipeline.txt /usr/share/jenkins/ref/pipeline.txt
-# RUN /usr/local/bin/install-plugins.sh < /usr/share/jenkins/ref/pipeline.txt
+RUN jenkins-plugin-cli --verbose --plugin-file /usr/share/jenkins/ref/pipeline.txt || \
+    /usr/local/bin/install-plugins.sh < /usr/share/jenkins/ref/pipeline.txt
 
 # Install service account for pipeline linting
 ENV JENKINS_USER='jankins' JENKINS_PASSWD='jankins'

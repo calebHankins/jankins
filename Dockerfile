@@ -14,7 +14,7 @@ RUN echo "Package: nodejs" >> /etc/apt/preferences.d/preferences \
     && echo "Pin: origin deb.nodesource.com" >> /etc/apt/preferences.d/preferences \
     && echo "Pin-Priority: 1001" >> /etc/apt/preferences.d/preferences
 RUN apt update
-RUN apt install -y -t nodesource nodejs
+RUN apt install -y nodejs
 # RUN apt install -y npm
 # RUN npm install -g npm
 RUN echo NODE_ENV:$NODE_ENV

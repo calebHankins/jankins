@@ -11,7 +11,7 @@ RUN apt update && \
 RUN echo "deb [signed-by=/etc/apt/keyrings/nodesource.gpg] https://deb.nodesource.com/node_16.x nodistro main" | tee /etc/apt/sources.list.d/nodesource.list
 RUN apt update
 RUN apt install -y nodejs
-RUN npm install -g npm
+# RUN npm install -g npm
 RUN echo NODE_ENV:$NODE_ENV
 RUN node --version && npm --version
 

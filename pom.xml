@@ -141,14 +141,14 @@
             <!-- provides sh() step -->
             <groupId>org.jenkins-ci.plugins.workflow</groupId>
             <artifactId>workflow-durable-task-step</artifactId>
-            <version>1204.v2a_40b_1127a_a_8</version>
+            <version>1298.v76e810d60811</version>
             <scope>test</scope>
         </dependency>
         <!-- https://mvnrepository.com/artifact/org.jenkins-ci.plugins.workflow/workflow-cps -->
         <dependency>
             <groupId>org.jenkins-ci.plugins.workflow</groupId>
             <artifactId>workflow-cps</artifactId>
-            <version>2803.v1a_f77ffcc773</version>
+            <version>3791.va_c0338ea_b_59c</version>
         </dependency>
         <!-- <dependency>
             <groupId>org.jenkins-ci.plugins.workflow</groupId>
@@ -182,26 +182,26 @@
             <!-- provides stage() step -->
             <groupId>org.jenkins-ci.plugins</groupId>
             <artifactId>pipeline-stage-step</artifactId>
-            <version>295.v061876582f2b_</version>
+            <version>306.ve23f3ce97e8a_</version>
             <scope>test</scope>
         </dependency>
         <dependency>
             <!-- provides git() step -->
             <groupId>org.jenkins-ci.plugins</groupId>
             <artifactId>git</artifactId>
-            <version>4.11.5</version>
+            <version>5.2.1-rc5158.50673237a_1d6</version>
         </dependency>
         <!-- Add Jenkins pipeline unit support https://github.com/jenkinsci/JenkinsPipelineUnit -->
         <dependency>
             <groupId>com.lesfurets</groupId>
             <artifactId>jenkins-pipeline-unit</artifactId>
-            <version>1.14</version>
+            <version>1.19</version>
             <scope>test</scope>
         </dependency>
         <dependency>
             <groupId>org.junit.jupiter</groupId>
             <artifactId>junit-jupiter-api</artifactId>
-            <version>5.8.2</version>
+            <version>5.10.0</version>
         </dependency>
         <dependency>
             <groupId>javax.activation</groupId>
@@ -211,12 +211,38 @@
         <dependency>
             <groupId>org.jboss.marshalling</groupId>
             <artifactId>jboss-marshalling</artifactId>
-            <version>1.4.12.jenkins-3</version>
+            <version>2.1.2.SP1</version>
         </dependency>
     </dependencies>
     <build>
         <pluginManagement>
             <plugins>
+                  <plugin>
+                    <groupId>org.codehaus.mojo</groupId>
+                    <artifactId>versions-maven-plugin</artifactId>
+                    <version>2.8.1</version>
+                    <!-- <executions>
+                    <execution>
+                        <id>update-dependencies</id>
+                        <phase>validate</phase>
+                        <goals>
+                        <goal>use-latest-versions</goal>
+                        </goals>
+                        <configuration>
+                        <includes>
+                            <include>groupId:artifactId</include>
+                            <include>groupId:artifactId</include>
+                            ...
+                        </includes>
+                        <excludes>
+                            <exclude>groupId:artifactId</exclude>
+                            <exclude>groupId:artifactId</exclude>
+                            ...
+                        </excludes>
+                        </configuration>
+                    </execution>
+                    </executions> -->
+                </plugin>
                 <plugin>
                     <groupId>org.apache.maven.plugins</groupId>
                     <artifactId>maven-surefire-plugin</artifactId>

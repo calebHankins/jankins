@@ -72,6 +72,11 @@
             <version>1.2.15</version>
         </dependency>
         <dependency>
+            <groupId>org.jvnet.staxex</groupId>
+            <artifactId>stax-ex</artifactId>
+            <version>1.8.1</version>
+        </dependency>
+        <dependency>
             <groupId>com.homeaway.devtools.jenkins</groupId>
             <artifactId>jenkins-spock</artifactId>
             <version>${jenkins-spock.version}</version>

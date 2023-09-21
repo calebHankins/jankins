@@ -4,13 +4,18 @@ USER root
 
 # Install Node.js & npm
 # @see: https://github.com/nodesource/distributions#debian-versions
-# RUN apt update && \
-#     apt install -y ca-certificates curl gnupg && \
-#     mkdir -p /etc/apt/keyrings && \
-#     curl -fsSL https://deb.nodesource.com/gpgkey/nodesource-repo.gpg.key | gpg --dearmor -o /etc/apt/keyrings/nodesource.gpg
-# RUN echo "deb [signed-by=/etc/apt/keyrings/nodesource.gpg] https://deb.nodesource.com/node_16.x nodistro main" | tee /etc/apt/sources.list.d/nodesource.list
+RUN apt update && \
+    apt install -y ca-certificates curl gnupg && \
+    mkdir -p /etc/apt/keyrings && \
+    curl -fsSL https://deb.nodesource.com/gpgkey/nodesource-repo.gpg.key | gpg --dearmor -o /etc/apt/keyrings/nodesource.gpg
+RUN echo "deb [signed-by=/etc/apt/keyrings/nodesource.gpg] https://deb.nodesource.com/node_16.x nodistro main" | tee /etc/apt/sources.list.d/nodesource.list
+# @see: https://github.com/nodesource/distributions/issues/1601
+RUN echo "Package: nodejs" >> /etc/apt/preferences.d/preferences \
+    && echo "Pin: origin deb.nodesource.com" >> /etc/apt/preferences.d/preferences \
+    && echo "Pin-Priority: 1001" >> /etc/apt/preferences.d/preferences
 RUN apt update
-RUN apt install -y nodejs npm
+RUN apt install -y -t nodesource nodejs
+# RUN apt install -y npm
 # RUN npm install -g npm
 RUN echo NODE_ENV:$NODE_ENV
 RUN node --version && npm --version

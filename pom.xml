@@ -67,6 +67,11 @@
     </dependencyManagement>
     <dependencies>
         <dependency>
+            <groupId>com.sun.xml.fastinfoset</groupId>
+            <artifactId>FastInfoset</artifactId>
+            <version>1.2.15</version>
+        </dependency>
+        <dependency>
             <groupId>com.homeaway.devtools.jenkins</groupId>
             <artifactId>jenkins-spock</artifactId>
             <version>${jenkins-spock.version}</version>

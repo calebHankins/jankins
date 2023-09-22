@@ -1,4 +1,4 @@
-FROM jenkins/jenkins:lts-slim-jdk11
+FROM jenkins/jenkins:2.414
 
 USER root
 

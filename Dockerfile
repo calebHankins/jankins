@@ -1,6 +1,9 @@
-FROM jenkins/jenkins:lts
+FROM jenkins/jenkins:2.414.2-lts-jdk11
 
 USER root
+
+# Since we're pinning to bullseye for now due to dome downstream issues, do upgrade as soon as we start
+RUN apt update || true; apt upgrade || true;
 
 # Install Node.js & npm
 # @see: https://github.com/nodesource/distributions#debian-versions

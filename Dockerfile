@@ -76,9 +76,9 @@ RUN mvn clean test
 COPY ./scripts ./scripts
 COPY ./.groovylintrc.json ./.groovylintrc.json
 # npm-groovy-lint doesn't support arm64
-RUN [ "$(dpkg --print-architecture)" =~ "amd64" ] && mkdir -p ./logs && npm-groovy-lint --output 'json' | grep '^{' > './logs/groovyLintResults.json'
-RUN [ "$(dpkg --print-architecture)" =~ "amd64" ] && cat './logs/groovyLintResults.json'
-RUN [ "$(dpkg --print-architecture)" =~ "amd64" ] && node ./scripts/checkGroovyLintResults.js
+RUN [ "$(dpkg --print-architecture)" = "amd64" ] && mkdir -p ./logs && npm-groovy-lint --output 'json' | grep '^{' > './logs/groovyLintResults.json'
+RUN [ "$(dpkg --print-architecture)" = "amd64" ] && cat './logs/groovyLintResults.json'
+RUN [ "$(dpkg --print-architecture)" = "amd64" ] && node ./scripts/checkGroovyLintResults.js
 
 # todo, roll a custom bootstrap around the entrypoint, only spin up jenkins app if we have pipelines to validate
 # ENTRYPOINT [ "bash" ]

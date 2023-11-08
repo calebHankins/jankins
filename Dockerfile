@@ -75,9 +75,10 @@ RUN mvn clean test
 # @info The linter will print 1 or more lines of non-json text, adding a grep to only save lines starting with a '{'
 COPY ./scripts ./scripts
 COPY ./.groovylintrc.json ./.groovylintrc.json
-RUN mkdir -p ./logs && npm-groovy-lint --output 'json' | grep '^{' > './logs/groovyLintResults.json'
-RUN cat './logs/groovyLintResults.json'
-RUN node ./scripts/checkGroovyLintResults.js
+# npm-groovy-lint doesn't support arm64
+RUN [[ "$(dpkg --print-architecture)" =~ "amd64" ]] && mkdir -p ./logs && npm-groovy-lint --output 'json' | grep '^{' > './logs/groovyLintResults.json'
+RUN [[ "$(dpkg --print-architecture)" =~ "amd64" ]] && cat './logs/groovyLintResults.json'
+RUN [[ "$(dpkg --print-architecture)" =~ "amd64" ]] && node ./scripts/checkGroovyLintResults.js
 
 # todo, roll a custom bootstrap around the entrypoint, only spin up jenkins app if we have pipelines to validate
 # ENTRYPOINT [ "bash" ]

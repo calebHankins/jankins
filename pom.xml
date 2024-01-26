@@ -77,6 +77,11 @@
             <version>1.4.8-1</version>
         </dependency>
         <dependency>
+            <groupId>org.brotli</groupId>
+            <artifactId>dec</artifactId>
+            <version>0.1.2</version>
+        </dependency>
+        <dependency>
             <groupId>com.sun.xml.fastinfoset</groupId>
             <artifactId>FastInfoset</artifactId>
             <version>1.2.15</version>

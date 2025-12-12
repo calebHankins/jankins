@@ -1,4 +1,4 @@
-FROM jenkins/jenkins:2.414
+FROM jenkins/jenkins:2.479.1
 
 USER root
 
@@ -55,7 +55,7 @@ USER root
 # Install dependencies listed in pom and perform sanity tests
 WORKDIR /usr/src/jankins
 COPY ./pom.xml ./
-RUN mvn clean install
+RUN mvn clean install -DskipTests
 
 # Copy Groovy Samples and Run sanity tests
 COPY ./vars ./vars

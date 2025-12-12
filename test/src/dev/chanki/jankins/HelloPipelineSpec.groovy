@@ -20,6 +20,11 @@ class HelloPipelineSpec extends DeclarativePipelineTest {
         scriptRoots = ['test/vars']
         scriptExtension = 'groovy'
         super.setUp()
+        // Mock the 'script' step used in declarative pipeline steps block
+        helper.registerAllowedMethod('script', [Closure], { Closure c ->
+            c.delegate = delegate
+            helper.callClosure(c)
+        })
     }
 
     @Test void deployTypeInfoPipeline() {

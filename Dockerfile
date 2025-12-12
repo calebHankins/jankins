@@ -1,4 +1,4 @@
-FROM jenkins/jenkins:2.479.1
+FROM jenkins/jenkins:2.528.3
 
 USER root
 
@@ -11,7 +11,7 @@ RUN apt update && \
     apt install -y ca-certificates curl gnupg && \
     mkdir -p /etc/apt/keyrings && \
     curl -fsSL https://deb.nodesource.com/gpgkey/nodesource-repo.gpg.key | gpg --dearmor -o /etc/apt/keyrings/nodesource.gpg
-RUN echo "deb [signed-by=/etc/apt/keyrings/nodesource.gpg] https://deb.nodesource.com/node_16.x nodistro main" | tee /etc/apt/sources.list.d/nodesource.list
+RUN echo "deb [signed-by=/etc/apt/keyrings/nodesource.gpg] https://deb.nodesource.com/node_22.x nodistro main" | tee /etc/apt/sources.list.d/nodesource.list
 # @see: https://github.com/nodesource/distributions/issues/1601
 RUN echo "Package: nodejs" >> /etc/apt/preferences.d/preferences \
     && echo "Pin: origin deb.nodesource.com" >> /etc/apt/preferences.d/preferences \
@@ -55,13 +55,15 @@ USER root
 # Install dependencies listed in pom and perform sanity tests
 WORKDIR /usr/src/jankins
 COPY ./pom.xml ./
-RUN mvn clean install -DskipTests
+RUN --mount=type=cache,target=/root/.m2 mvn dependency:resolve dependency:resolve-plugins
+RUN --mount=type=cache,target=/root/.m2 mvn clean install -DskipTests
 
 # Copy Groovy Samples and Run sanity tests
 COPY ./vars ./vars
 COPY ./src ./src
 COPY ./test ./test
-RUN mvn clean test
+RUN --mount=type=cache,target=/root/.m2 mvn test-compile
+RUN --mount=type=cache,target=/root/.m2 mvn clean test
 
 # Run an ascending order of groovy linting.
 # todo, condense these down to one run for performance boost.

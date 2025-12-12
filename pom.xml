@@ -17,7 +17,7 @@
         <repository>
             <id>jenkins-releases</id>
             <name>Jenkins Releases</name>
-            <url>http://repo.jenkins-ci.org/releases</url>
+            <url>https://repo.jenkins-ci.org/releases</url>
         </repository>
         <repository>
             <id>repo.jenkins-ci.org</id>
@@ -40,7 +40,7 @@
         <google.guava.version>[24.1.1,)</google.guava.version>
 
         <jenkins-spock.version>2.1.5</jenkins-spock.version>
-        <jenkins.version>2.427</jenkins.version>
+        <jenkins.version>2.479.1</jenkins.version>
         <jenkins.servlet.version>4.0.1</jenkins.servlet.version>
         <!-- <jenkins.workflow.cps.version>2.94.4</jenkins.workflow.cps.version> -->
         <!-- <jenkins.workflow.basic.steps.version>2.6</jenkins.workflow.basic.steps.version> -->
@@ -151,14 +151,14 @@
             <!-- provides sh() step -->
             <groupId>org.jenkins-ci.plugins.workflow</groupId>
             <artifactId>workflow-durable-task-step</artifactId>
-            <version>1298.v76e810d60811</version>
+            <version>1452.v0ee719c104a_7</version>
             <scope>test</scope>
         </dependency>
         <!-- https://mvnrepository.com/artifact/org.jenkins-ci.plugins.workflow/workflow-cps -->
         <dependency>
             <groupId>org.jenkins-ci.plugins.workflow</groupId>
             <artifactId>workflow-cps</artifactId>
-            <version>3791.va_c0338ea_b_59c</version>
+            <version>4046.v90b_1b_9edec67</version>
         </dependency>
         <!-- <dependency>
             <groupId>org.jenkins-ci.plugins.workflow</groupId>
@@ -192,14 +192,14 @@
             <!-- provides stage() step -->
             <groupId>org.jenkins-ci.plugins</groupId>
             <artifactId>pipeline-stage-step</artifactId>
-            <version>306.ve23f3ce97e8a_</version>
+            <version>322.vecffa_99f371c</version>
             <scope>test</scope>
         </dependency>
         <dependency>
             <!-- provides git() step -->
             <groupId>org.jenkins-ci.plugins</groupId>
             <artifactId>git</artifactId>
-            <version>5.2.1-rc5158.50673237a_1d6</version>
+            <version>5.2.2</version>
         </dependency>
         <!-- Add Jenkins pipeline unit support https://github.com/jenkinsci/JenkinsPipelineUnit -->
         <dependency>
@@ -214,9 +214,41 @@
             <version>5.10.0</version>
         </dependency>
         <dependency>
-            <groupId>javax.activation</groupId>
-            <artifactId>activation</artifactId>
-            <version>1.1.1</version>
+            <groupId>jakarta.servlet</groupId>
+            <artifactId>jakarta.servlet-api</artifactId>
+            <version>5.0.0</version>
+            <scope>test</scope>
+        </dependency>
+        <dependency>
+            <groupId>org.tukaani</groupId>
+            <artifactId>xz</artifactId>
+            <version>1.9</version>
+        </dependency>
+        <dependency>
+            <groupId>com.github.luben</groupId>
+            <artifactId>zstd-jni</artifactId>
+            <version>1.5.5-6</version>
+        </dependency>
+        <dependency>
+            <groupId>org.brotli</groupId>
+            <artifactId>dec</artifactId>
+            <version>0.1.2</version>
+            <scope>runtime</scope>
+        </dependency>
+        <dependency>
+            <groupId>org.jboss.modules</groupId>
+            <artifactId>jboss-modules</artifactId>
+            <version>2.0.0.Final</version>
+        </dependency>
+        <dependency>
+            <groupId>jakarta.activation</groupId>
+            <artifactId>jakarta.activation-api</artifactId>
+            <version>2.1.3</version>
+        </dependency>
+        <dependency>
+            <groupId>jakarta.xml.bind</groupId>
+            <artifactId>jakarta.xml.bind-api</artifactId>
+            <version>4.0.0</version>
         </dependency>
         <dependency>
             <groupId>org.jboss.marshalling</groupId>
@@ -269,6 +301,7 @@
                                     <include>${test.pattern}</include>
                                 </includes>
                                 <useManifestOnlyJar>false</useManifestOnlyJar>
+                                <argLine>--add-opens java.base/java.lang=ALL-UNNAMED --add-opens java.base/java.lang.reflect=ALL-UNNAMED --add-opens java.base/java.io=ALL-UNNAMED --add-exports java.base/sun.nio.ch=ALL-UNNAMED</argLine>
                                 <systemPropertyVariables>
                                     <root.loglevel>${test.loglevel}</root.loglevel>
                                     <root.appender>Stdout</root.appender>
@@ -323,7 +356,7 @@
                 <plugin>
                     <groupId>org.jacoco</groupId>
                     <artifactId>jacoco-maven-plugin</artifactId>
-                    <version>0.8.3</version>
+                    <version>0.8.10</version>
                     <executions>
                         <execution>
                             <goals>
